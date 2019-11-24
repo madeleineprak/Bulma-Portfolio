@@ -15,14 +15,12 @@ a {
 
 #social-links {
     margin: 0 auto;
-        top: 50%;
-        left: 50%;
-        text-align: center;
+    text-align: center;
 }
 
-.social-icon {
-    width: 150px;
-    height: 150px;
+#social-links a {
+    color: black;
+    cursor: pointer;
 }
 
 #web-return-to-top, #mobile-return-to-top {
