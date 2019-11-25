@@ -7,7 +7,7 @@ $(document).ready(function() {
             gif: "./assets/images/MomandPop.gif",
             description: "An app with an interactive map that keeps track of all the awesome local mom-and-pop shops in an area.",
             ideation: "",
-            tools: ["Sequelize", "MapBox", "GeocoderAPI", "Materialize", "fsnkjnfak"],
+            tools: ["Sequelize", "MapBox", "GeocoderAPI", "Materialize"],
             github: "https://github.com/madeleineprak/Mom-And-Pop",
             website: "https://momnpop.herokuapp.com/"
         },
@@ -116,7 +116,7 @@ $(document).ready(function() {
     function displayMobileProjects() {
         projects.forEach(function(project) {
             var technologies = project.tools;
-            var contentSection = $("<div>").addClass("content").text(project.description);
+            var contentSection = $("<div>").addClass("content").text(project.description + " ");
 
             $("#mobile-projects").append(
                 $("<div>").addClass("card").append(
@@ -129,10 +129,16 @@ $(document).ready(function() {
                         $("<div>").addClass("media").append(
                             $("<div>").addClass("media-content").append(
                                 $("<p>").addClass("title is-4").text(project.name),
-                                $("<p>").addClass("subtitle is-6").attr("href", "https://github.com/madeleineprak").text("@madeleineprak")
+                                $("<p>").addClass("subtitle is-6").attr("href", "https://github.com/madeleineprak").attr("target", "_blank").text("@madeleineprak")
                             )
                         ),
                         contentSection.append(
+                            $("<a>").attr("href", project.github).attr("target", "_blank").addClass("project-button").text("GITHUB ").append(
+                                $("<i>").addClass("fab fa-github-square")
+                            ),
+                            $("<a>").attr("href", project.website).attr("target", "_blank").addClass("project-button").text("DEPLOYED ").append(
+                                $("<i>").addClass("fas fa-external-link-square-alt")
+                            ),
                             $("<br>")
                         )
                     )
@@ -150,15 +156,21 @@ $(document).ready(function() {
 
     function displayProjectDetails(project){
         var technologies = project.tools;
-        var techSection = $("<h2>").text("Technologies Used");
+        var techSection = $("<h2>").text("Technologies Used").addClass("details-header");
         $("#web-project-details").empty();
         var div = $("<div>").append(
             
             $("<h2>").text(project.name),
             $("<p>").text(project.description),
-            $("<h2>").text("Ideation"),
+            $("<a>").attr("href", project.github).attr("target", "_blank").addClass("project-button").text("GITHUB ").append(
+                $("<i>").addClass("fab fa-github-square")
+            ),
+            $("<a>").attr("href", project.website).attr("target", "_blank").addClass("project-button").text("DEPLOYED ").append(
+                $("<i>").addClass("fas fa-external-link-square-alt")
+            ),
+            // $("<h2>").text("Ideation"),
             techSection,
-            $("<h2>").text("Solution"),
+            $("<h2>").text("Preview").addClass("details-header"),
             $("<img>").attr("src", project.gif).addClass("project-gif")
             // $("<img>").attr("src", project.photo)
         )

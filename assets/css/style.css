@@ -8,8 +8,31 @@ a {
     /* position: absolute; */
 }
 
+.project-button {
+    margin-right: 5px;
+    cursor: pointer;
+}
+.fab, .fas, .far {
+    font-size: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+#github-link {
+    margin: 0;
+    padding: 0;
+}
+
+.details-header {
+    margin-top: 15px;
+}
+#about p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 #profile-pic {
-    max-height: 40vh;
+    max-width: 200px;
     /* margin: 0 auto; */
 }
 
