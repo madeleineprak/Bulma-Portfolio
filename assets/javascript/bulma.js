@@ -3,7 +3,7 @@ $(document).ready(function() {
     var projects = [
         {
             name: "Mom 'n Pop",
-            photo: "./assets/images/MomandPop.png",
+            photo: "./assets/images/MomandPop.PNG",
             gif: "./assets/images/MomandPop.gif",
             description: "An app with an interactive map that keeps track of all the awesome local mom-and-pop shops in an area.",
             ideation: "",
