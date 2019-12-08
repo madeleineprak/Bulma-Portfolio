@@ -2,6 +2,16 @@ $(document).ready(function() {
 
     var projects = [
         {
+            name: "Get The Scoop",
+            photo: "./assets/images/GetTheScoop.PNG",
+            gif: "./assets/images/GetTheScoop.gif",
+            description: "An app that keeps track of hacker news and lets the user add personalized notes.",
+            ideation: "",
+            tools: ["Mongoose", "Express", "Express-Handlebars", "Cheerio"],
+            github: "https://github.com/madeleineprak/Get-The-Scoop",
+            website: "https://fast-inlet-41689.herokuapp.com/"
+        },
+        {
             name: "Mom 'n Pop",
             photo: "./assets/images/MomandPop.PNG",
             gif: "./assets/images/MomandPop.gif",
